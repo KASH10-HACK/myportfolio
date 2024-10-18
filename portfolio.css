@@ -534,3 +534,124 @@ form h2 .SocialLinks i:hover{
 .about-us{
     overflow: auto;
 }
+/* General reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+aside {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.1rem;
+    background-color: #212529;
+    backdrop-filter: blur(20px);
+}
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    aside {
+        width: 100px; /* Reduce sidebar width */
+    }
+    
+    .home-slide {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+    
+    .HomeContent {
+        padding: 20px; /* Reduce padding for mobile */
+        font-size: 1.5rem; /* Adjust font size */
+    }
+    
+    .SideImg {
+        width: 100%; /* Make image responsive */
+        margin: 0; /* Remove large margins */
+    }
+    
+    .SideImg img {
+        border-radius: 5px; /* Smaller border radius */
+    }
+    
+    .buttonGroup {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%;
+    }
+    
+    .buttonGroup button {
+        width: 100%; /* Full width buttons on mobile */
+    }
+    
+    .about-us, .services, .gallery {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 50%); /* 2 columns on mobile */
+    }
+
+    .contactMe {
+        display: block; /* Stacked layout on mobile */
+        padding: 10px;
+    }
+
+    .contactMe form {
+        grid-template-columns: 1fr; /* Single-column form layout */
+    }
+
+    .contactMe form input, 
+    .contactMe form textarea {
+        width: 100%; /* Make inputs full width */
+    }
+
+    .services .service {
+        margin: 1rem 0; /* Reduce margin for services */
+    }
+
+    footer {
+        position: static;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeContent h1 {
+        font-size: 2rem; /* Smaller heading on small devices */
+    }
+
+    .HomeContent h2 {
+        font-size: 1.5rem;
+    }
+
+    .buttonGroup button {
+        font-size: 1rem; /* Adjust button text size */
+    }
+
+    .gallery {
+        grid-template-columns: 100%; /* Single column for projects */
+    }
+    
+    .services {
+        grid-template-columns: 100%; /* Single column for services */
+    }
+}
