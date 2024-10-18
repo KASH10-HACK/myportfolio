@@ -14,16 +14,17 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
 
 aside {
-    width: 280px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     height: 100%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: #212529;
     backdrop-filter: blur(20px);
 }
@@ -37,7 +38,7 @@ aside {
 aside li {
     list-style-type: none;
     display: flex;
-    padding: 20px;
+    padding: 15px;
     gap: 10px;
     color: white;
     align-items: center;
@@ -53,45 +54,47 @@ aside li:hover {
 aside li::after {
     position: absolute;
     width: 100%;
-    left: 0px;
+    left: 0;
     height: 1px;
     background: linear-gradient(to left, transparent, #ffffff24, transparent);
     content: '';
-    bottom: 0px;
+    bottom: 0;
 }
 
 aside li i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
-.activeLink{
-    color:#80ed99
+
+.activeLink {
+    color: #80ed99;
 }
+
 .mySwiper {
     flex: 1;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .home-slide {
     color: white;
     display: flex;
+    flex-direction: column;
     background-color: #343a40;
-    padding-right: 7rem;
-    padding-left: 3rem;
-    padding-bottom: 5rem;
+    padding: 2rem;
 }
+
 .HomeContent {
-    margin: auto 0px;
-    flex: 1;
-    height: auto;
-    padding: 100px;
+    margin: auto;
+    padding: 50px;
     user-select: none;
 }
+
 .SideImg {
-    width: 30%;
-    margin: auto 30px;
-    margin-right: 100px;
+    width: 100%;
+    margin: 20px 0;
     position: relative;
 }
+
 .SideImg img {
     width: 100%;
     border-radius: 10px;
@@ -103,20 +106,20 @@ aside li i {
 }
 
 .bottom-left-corner {
-    left: -50px;
-    bottom: -50px;
+    left: -30px;
+    bottom: -30px;
     rotate: -90deg;
 }
 
 .top-right-corner {
-    right: -50px;
-    top: -50px;
+    right: -30px;
+    top: -30px;
     rotate: 90deg;
 }
 
 .hr1 {
-    width: 150px;
-    height: 10px;
+    width: 100px;
+    height: 7px;
     border: none;
     background: #80ed99;
     border-top-right-radius: 3px;
@@ -124,26 +127,24 @@ aside li i {
 }
 
 .hr2 {
-    width: 10px;
-    height: 120px;
+    width: 7px;
+    height: 80px;
     border-bottom-left-radius: 3px;
-
     background: #80ed99;
     border: none;
     border-bottom-right-radius: 3px;
 }
 
 .HomeContent h1 {
-    font-size: 3em;
+    font-size: 2.2em;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .HomeContent h2 {
-    font-size: 2.3em;
+    font-size: 1.8em;
     margin-bottom: 10px;
     font-weight: 600;
-
 }
 
 .HomeContent h1 .stylized-name {
@@ -156,22 +157,22 @@ aside li i {
 }
 
 .HomeContent .heroline {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    padding-right:50px;
+    padding-right: 20px;
 }
 
 .buttonGroup {
     display: flex;
-    padding: 10px 0px;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.buttonGroup button ,.primary{
+.buttonGroup button,
+.primary {
     padding: 10px 20px;
     border: none;
-    outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     margin: 5px;
     cursor: pointer;
@@ -180,16 +181,17 @@ aside li i {
     border-radius: 5px;
     transition: 0.3rem;
 }
+
 .contactMe-btn,
-.hireMe-btn{
+.hireMe-btn {
     font-size: 1rem;
     transition: 0.3s;
 }
+
 .contactMe-btn:hover,
-.hireMe-btn:hover{
+.hireMe-btn:hover {
     background-color: white;
-    color: #1d8637;;
-  
+    color: #1d8637;
 }
 
 .slide-help {
@@ -199,76 +201,52 @@ aside li i {
     text-align: center;
     font-weight: 400;
     z-index: 100;
-    left: 0%;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-}
-
-.mySwiper {
-    width: 80vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #343a40;
-}
-
-.swiper-slide {
-    width: 100%;
-    height: 100%;
-    background-color: #343a40;
+    font-size: 1rem;
 }
 
 .about-us {
-    width:100%;
-    height:100%;
-    padding: 100px;
-    padding-top: 8rem;
+    width: 100%;
+    padding: 50px;
     color: white;
 }
 
 .heading {
-    padding: 20px 10px;
-    font-size: 2.5rem;
-    top: 4rem;
+    font-size: 2rem;
     color: #80ed99;
 }
-.about-us .heading{
-    position: absolute;
-}
-
 
 .about-us h3 {
     padding: 10px;
 }
 
 .aboutme-deatils {
-    padding: 20px;
+    padding: 10px;
     font-weight: 300;
 }
 
 .about-me-divison {
     display: flex;
+    flex-direction: column;
 }
 
 .about-me-table {
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    display: block;
+    width: 100%;
 }
 
 .about-me-table li {
-    padding: 20px;
+    padding: 10px;
     position: relative;
 }
 
 .about-me-table li::after {
     position: absolute;
     width: 100%;
-    left: 0px;
+    left: 0;
     height: 1px;
     background: linear-gradient(to left, transparent, #ffffff77, transparent);
     content: '';
-    bottom: 0px;
+    bottom: 0;
 }
 
 .about-me-table span {
@@ -278,14 +256,12 @@ aside li i {
 }
 
 .about-me-table .buttonGroup {
-    grid-column: 1/span 2;
     justify-content: center;
-    padding: 50px;
-    flex: 1;
+    padding: 30px;
 }
 
 .skill-bar {
-    width: calc(40% - 20px);
+    width: 100%;
 }
 
 .skill-bar li {
@@ -304,7 +280,6 @@ aside li i {
     height: 15px;
     background-color: #272c30;
     border-radius: 20px;
-
 }
 
 .active-bar {
@@ -316,342 +291,133 @@ aside li i {
 
 .services {
     color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 100px ;
-    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
     box-sizing: border-box;
-}
-
-.services .heading {
-    grid-column: 1/span 3;
-    position: absolute;
-    top: 7rem;
 }
 
 .services .service {
     display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-content: center;
-    height: 20rem;
+    height: auto;
+    margin: 1rem 0;
     background-color: rgba(0, 0, 0, 0.437);
     border-radius: 5px;
-    margin: 1rem;
-    margin-top: 6rem;
-    backdrop-filter: blur(10px);
-    flex-direction: column;
+    padding: 1rem;
     transition-duration: 0.25s;
     cursor: pointer;
-    padding: 0rem 1rem;
 }
 
 .services .service i {
-    font-size: 3rem;
-    color:#80ed99
+    font-size: 2rem;
+    color: #80ed99;
 }
 
-.services .service .service-icon {
-    border-radius: 5px;
-    margin: 20px auto;
-}
-.service h2{
-    color:#80ed99;
+.services .service h2 {
+    color: #80ed99;
     margin-bottom: 1rem;
 }
+
 .service:hover {
     background-color: #80ed99;
-    color: #176d2d
-}
-.service:hover h2,.service:hover i{
-    color: #176d2d
+    color: #176d2d;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    padding:100px;
-    grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
-}
-
-.gallery h1,
-.gallery h2 {
-    grid-column: 1/span 3;
-}
-
-.gallery h2 {
-    color: white;
-    font-weight: 600;
-    font-size: 1.5rem;
-    padding: 20px 10px;
+    display: block;
+    padding: 50px;
 }
 
 .gallery .project {
-    margin: 25px 20px;
-    margin-top: 0px;
+    margin: 10px 0;
     background: #212529;
     padding: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    
-}
-.gallery .project:hover > img{
-    scale: 1.3;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .gallery .project img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
     transition: 0.3s;
-   
 }
 
 .contactMe {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    position: relative;
-    padding-top: 2rem;
-    padding-right: 2rem;
-}
-.contactMe .heading{
-    padding-left: 2rem;
-}
-.contactMe h1 {
-    grid-column: 1/span 3;
-    font-size:2.5rem;
-    padding:30px;
-}
-
-.contactMe form {
-    grid-area: 2/2/ span 5/span 2;
-}
-
-.contactinfo {
     display: flex;
     flex-direction: column;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.contactinfo i {
-    font-size: 2rem;
-    color: #80ed99;
-    padding-bottom: 1rem;
-}
-
-.contactinfo h3 {
-    color: #80ed99;
+    padding: 20px;
 }
 
 .contactMe form {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    padding: 20px;
-    height: fit-content;
-    color: white;
-}
-
-.contactMe form h2 {
-    grid-column: 1/span 2;
-    padding: 20px;
     display: flex;
+    flex-direction: column;
 }
 
-.contactMe form input {
-    padding: 15px;
+.contactMe form input,
+.contactMe form textarea {
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 10px;
-    margin-right: 10px ;
-    font-size: 1.1rem;
-    border: none;
+    font-size: 1rem;
     color: white;
     background-color: #212529;
-
+    border: none;
 }
 
-.contactMe form input:focus {
+.contactMe form input:focus,
+.contactMe form textarea:focus {
     border: 1px solid #85f69f;
     outline: none;
-
 }
 
-.contactMe form textarea {
-    width: calc(100% - 10px);
-    grid-column: 1/span 2;
-    margin-top: 10px;
-    padding: 20px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    resize: none;
-    border:none;
+.contactMe button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #1d8637;
+    color: white;
+    border-radius: 5px;
     border: none;
-    color:white;
-    background-color: #212529;
+    cursor: pointer;
+    transition: 0.3rem;
 }
 
-.contactMe form textarea:focus {
-    border: 1px solid #85f69f !important;
-}
-.contactMe button{
-    grid-column: 1/span 2;
-    margin:20px auto ;
-
-}
-footer{
-    position:absolute;
-    bottom:0px;
-    right:0px;
+footer {
     text-align: center;
-    color:white;
-    width:100%;
+    color: white;
+    width: 100%;
     font-weight: 200;
     font-size: 0.8rem;
 }
-footer li{
-    padding:10px;
-}
-form h2 .SocialLinks{
-    padding:5px;
-    width:fit-content;
-    margin-left:auto;
-    margin-right:10px;
-    background-color: #212529;
-    border-radius: 30px;
-}
-form h2 .SocialLinks i{
-    padding:10px;
-    border-radius: 50%;
-    transition-duration: 0.25s;
-}
-form h2 .SocialLinks i:hover{
-    background-color: #176d2d;
-}
-.about-us{
-    overflow: auto;
-}
-/* General reset */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
 
-main {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-aside {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    font-size: 1.1rem;
-    background-color: #212529;
-    backdrop-filter: blur(20px);
-}
-
-.Links {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
     aside {
-        width: 100px; /* Reduce sidebar width */
+        width: 280px;
     }
-    
-    .home-slide {
-        flex-direction: column; /* Stack content vertically */
-        padding: 1rem; /* Adjust padding */
-    }
-    
-    .HomeContent {
-        padding: 20px; /* Reduce padding for mobile */
-        font-size: 1.5rem; /* Adjust font size */
-    }
-    
+
     .SideImg {
-        width: 100%; /* Make image responsive */
-        margin: 0; /* Remove large margins */
+        width: 30%;
+        margin-right: 100px;
     }
-    
-    .SideImg img {
-        border-radius: 5px; /* Smaller border radius */
+
+    .services {
+        grid-template-columns: repeat(3, 1fr);
     }
-    
-    .buttonGroup {
-        flex-direction: column; /* Stack buttons vertically */
-        width: 100%;
-    }
-    
-    .buttonGroup button {
-        width: 100%; /* Full width buttons on mobile */
-    }
-    
-    .about-us, .services, .gallery {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-    
+
     .gallery {
-        grid-template-columns: repeat(2, 50%); /* 2 columns on mobile */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
     }
 
     .contactMe {
-        display: block; /* Stacked layout on mobile */
-        padding: 10px;
-    }
-
-    .contactMe form {
-        grid-template-columns: 1fr; /* Single-column form layout */
-    }
-
-    .contactMe form input, 
-    .contactMe form textarea {
-        width: 100%; /* Make inputs full width */
-    }
-
-    .services .service {
-        margin: 1rem 0; /* Reduce margin for services */
-    }
-
-    footer {
-        position: static;
-        padding: 1rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .HomeContent h1 {
-        font-size: 2rem; /* Smaller heading on small devices */
-    }
-
-    .HomeContent h2 {
-        font-size: 1.5rem;
-    }
-
-    .buttonGroup button {
-        font-size: 1rem; /* Adjust button text size */
-    }
-
-    .gallery {
-        grid-template-columns: 100%; /* Single column for projects */
-    }
-    
-    .services {
-        grid-template-columns: 100%; /* Single column for services */
+        grid-template-columns: 20% 80%;
     }
 }
