@@ -408,16 +408,93 @@ footer {
         margin-right: 100px;
     }
 
+    .HomeContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-me-divison {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .services {
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .service {
+        margin: 0 20px;
+        width: 30%;
     }
 
     .gallery {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
+    }
+
+    .contactMe {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .HomeContent h1 {
+        font-size: 3.5rem;
+    }
+
+    .HomeContent h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-us {
+        padding: 100px;
+    }
+
+    .services .service i {
+        font-size: 3rem;
+    }
+
+    .services {
+        padding: 100px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .contactMe {
         grid-template-columns: 20% 80%;
+    }
+}
+@media (max-width: 768px) {
+    aside {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        transition: 0.3s;
+        background-color: #212529;
+        z-index: 1000;
+    }
+
+    aside.open {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #80ed99;
+        color: white;
+        padding: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1001;
     }
 }
